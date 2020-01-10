@@ -1,6 +1,6 @@
 {
   "name": "wind-sql",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "node mysql orm",
   "main": "index.js",
   "scripts": {

@@ -1,3 +1,3 @@
-let ssql = require('./src');
+let windSQL = require('./build/main');
 
-module.exports = { ssql };
+module.exports = windSQL;

@@ -3,10 +3,10 @@ const mysql = require('mysql');
 
 let pool = mysql.createPool({
     connectionLimit : 10,
-    host            : '47.102.101.22',
+    host            : '127.0.0.1',
     user            : 'root',
-    password        : '745764370HExu..',
-    database        : 'patch',
+    password        : 'root',
+    database        : 'test',
     dateStrings     : true
 });
 ssql.initSSQL({
@@ -19,13 +19,9 @@ let obj = {
     name: 'wind',
     studentSex: 1,
     age: 21,
-    phone: '18291841334',
-    mail: '745764370@qq.com'
+    phone: '111111111',
+    mail: '111111111@qq.com'
 };
-// console.log('execute: ', execute);
-// ssql.insert(obj, 'student');
-// ssql.updateById(obj, 'student');
-// ssql.deleteById(1, 'student');
 
 (async function() {
     let res = await ssql.selectById(1, 'topic');

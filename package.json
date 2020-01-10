@@ -1,6 +1,6 @@
 {
   "name": "wind-sql",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "node mysql orm",
   "main": "index.js",
   "scripts": {
@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "backpack-core": "^0.4.3",
-    "node-sql-parser": "^1.6.18"
+    "node-sql-parser": "^1.6.18",
+    "colors-console": "^1.0.3"
   },
   "author": "wind <he745764370@gmail.com> (https://github.com/wind-hx/)",
   "license": "MIT",
   "devDependencies": {
-    "colors-console": "^1.0.3",
     "mysql": "^2.17.1"
   },
   "publishConfig": {

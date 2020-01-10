@@ -1,3 +1,3 @@
-let ssql = require('src');
+let ssql = require('./src');
 
 module.exports = { ssql };

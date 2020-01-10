@@ -52,7 +52,7 @@ function select(table, where) {
 }
 
 exports.insert = function(target, table) {
-    let obj = { ... target };
+    let obj = Object.assign({}, target);
     delete obj.id;
     let columns = [];
     let values = [];
@@ -94,7 +94,7 @@ exports.updateByColumns = function(target, table, where) {
 }
 
 exports.updateById = function(target, table) {
-    let obj = { ... target };
+    let obj = Object.assign({}, target);
     delete obj.id;
     let columns = initUpdateColumns(obj);
     const parser = new Parser();

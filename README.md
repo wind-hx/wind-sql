@@ -71,7 +71,9 @@ let cat = {
 await windSQL.insert(cat, 'cat');
 
 ```
-*  `windSQL.insert(model, table);`, id cannot appear in attribute.
+*  `windSQL.insert(model, table);`id cannot appear in attribute.
+*   require model
+*   require table
 
 ## UPDATE_BY_ID
 
@@ -90,9 +92,9 @@ let cat = {
 await windSQL.updateById(cat, 'cat');
 
 ```
-*  `windSQL.updateById(model, table);`, 
-    require model
-    require table.
+*  `windSQL.updateById(model, table);`
+*   require model
+*   require table
 
 ## UPDATE_BY_COLUMN
 
@@ -110,9 +112,9 @@ windSQL.initSSQL({
 await windSQL.deleteById(1, 'cat');
 
 ```
-*  `windSQL.deleteById(id, table);`, 
-    require id
-    require table.
+*  `windSQL.deleteById(id, table);`
+*   require id
+*   require table
 
 ## SELECT_BY_ID
 
@@ -126,9 +128,9 @@ windSQL.initSSQL({
 await windSQL.selectById(1, 'cat');
 
 ```
-*  `windSQL.selectById(id, table);`, 
-    require id
-    require table.
+*  `windSQL.selectById(id, table);`
+*   require id
+*   require table
 
 ## SELECT_ALL
 
@@ -142,8 +144,8 @@ windSQL.initSSQL({
 await windSQL.selectAll('cat');
 
 ```
-*  `windSQL.selectAll(table);`, 
-    require table.
+*  `windSQL.selectAll(table);`
+*   require table.
 
 ## SELECT_BY_COLUMN
 

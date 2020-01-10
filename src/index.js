@@ -1,4 +1,4 @@
-import { insert, updateById, deleteById, selectById, select } from './execute';
+import { insert, updateById, deleteById, selectById, selectAll } from './execute';
 import config from './config';
 
 export function initSSQL(options) {
@@ -8,4 +8,4 @@ export function initSSQL(options) {
     global.config = Object.assign(config, options);
 }
 
-export { insert, updateById, deleteById, selectById, select };
+export { insert, updateById, deleteById, selectById, selectAll };

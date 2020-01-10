@@ -1,4 +1,4 @@
-const ssql = require('../build/main');
+const windSQL = require('../build/main');
 const mysql = require('mysql');
 
 let pool = mysql.createPool({
@@ -9,7 +9,7 @@ let pool = mysql.createPool({
     database        : 'test',
     dateStrings     : true
 });
-ssql.initSSQL({
+windSQL.initSSQL({
     mysql: pool,
     resultUseCamelCase: true,
 });
@@ -24,7 +24,7 @@ let obj = {
 };
 
 (async function() {
-    let res = await ssql.selectById(1, 'topic');
+    let res = await windSQL.selectById(1, 'topic');
     console.log(res);
 })()
-console.log(ssql);
+console.log(windSQL);

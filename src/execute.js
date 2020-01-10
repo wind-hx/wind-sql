@@ -82,9 +82,9 @@ export async function selectById(id, table) {
     return result;
 }
 
-export async function select(table) {
+export async function selectAll(table) {
     after();
-    let sql = parser.select(table);
+    let sql = parser.selectAll(table);
     let executeSQL = sqlHook(sql);
     let result = await execute(executeSQL, 'select');
     before(result);

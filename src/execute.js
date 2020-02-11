@@ -46,6 +46,27 @@ async function execute(sql, type) {
     });
 }
 
+export async function query(sql, args) {
+    if (!sql || !args) {
+        throw new Error('args', 'not null');
+    }
+    showLog(sql);
+    return new Promise((resolve, reject) => {
+        global.config.mysql.query(sql, args, function (error, results, fields) {
+            if (error) throw error;
+            if ('select' === sql.substring(0, 6)) {
+                if (global.config.resultUseCamelCase) {
+                    resolve(listToHump(results));
+                } else {
+                    resolve(results);
+                }
+            } else {
+                resolve(results);
+            }
+        });
+    });
+}
+
 export async function insert(target, table) {
     let executeObj = after(target);
     let sql = parser.insert(executeObj, table);

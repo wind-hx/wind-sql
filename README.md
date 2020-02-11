@@ -8,6 +8,7 @@
 
 - [Install](#install)
 - [Introduction](#Introduction)
+- [QUERY](#QUERY)
 - [INSERT](#INSERT)
 - [UPDATE_BY_ID](#UPDATE_BY_ID)
 - [UPDATE_BY_COLUMN](#UPDATE_BY_COLUMN)
@@ -54,6 +55,22 @@ windSQL.initSSQL({
 });
 
 ```
+
+## QUERY
+
+```js
+var windSQL = require('wind-sql');
+windSQL.initSSQL({
+    mysql: pool,
+    resultUseCamelCase: true,
+});
+
+await windSQL.query('select * from user whre id = ?', [21]);
+
+```
+*  `windSQL.query(sql, args);`
+*   require sql type is String
+*   require args type is Array
 
 ## INSERT
 

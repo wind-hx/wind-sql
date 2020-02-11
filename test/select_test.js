@@ -24,7 +24,8 @@ let obj = {
 };
 
 (async function() {
-    let res = await windSQL.selectById(1, 'topic');
-    console.log(res);
+    let res = await windSQL.selectById(107, 'ims_node_raise_order');
+    let res2 = await windSQL.query('select * from ims_node_raise_order where id = ?', [108]);
+    console.log(res, res2);
 })()
 console.log(windSQL);
